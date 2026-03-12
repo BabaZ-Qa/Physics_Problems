@@ -1,11 +1,19 @@
 Let's solve the system of equations step by step:
 
-[
-\begin{cases}
-2x + 3y = 12 \
-x - y = 1
-\end{cases}
-]
+2
+x
++
+3
+y
+=
+12
+ and 
+x
+−
+y
+=
+1
+.
 
 ---
 
@@ -74,3 +82,4 @@ x = 3, \quad y = 2
 If you want, I can also show a **graphical method** to visualize this solution on the coordinate plane—it makes it very intuitive!
 
 Do you want me to do that?
+

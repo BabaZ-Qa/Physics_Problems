@@ -67,4 +67,4 @@ The values that satisfy both equations are:
 
 (You can double-check this by plugging them into the first equation: $2(3) + 3(2) = 6 + 6 = 12$. It works!)
 
-Would you like me to show you how to solve this using the substitution method or perhaps graph these lines for you?
+

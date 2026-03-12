@@ -1,85 +1,70 @@
-Let's solve the system of equations step by step:
+To solve this system of equations, we can use the **Substitution Method** or the **Elimination Method**. Let's use the elimination method as it is often the most direct way to cancel out a variable.
 
-2
-x
-+
-3
-y
-=
-12
- and 
-x
-−
-y
-=
-1
-.
+### Given Equations:
+
+1. $2x + 3y = 12$
+2. $x - y = 1$
 
 ---
 
-## Step 1: Solve one equation for one variable
+### Step 1: Align the variables
 
-From the second equation:
+To eliminate one variable (let's choose $y$), we need the coefficients of $y$ in both equations to be opposites. In equation (1), the coefficient of $y$ is **3**. In equation (2), it is **-1**.
 
-[
-x - y = 1 \implies x = y + 1
-]
+Multiply every term in equation (2) by **3**:
 
----
 
-## Step 2: Substitute into the first equation
+$$3(x - y) = 3(1)$$
 
-Substitute (x = y + 1) into (2x + 3y = 12):
+$$3x - 3y = 3$$
 
-[
-2(y + 1) + 3y = 12
-]
+Now our system looks like this:
 
-[
-2y + 2 + 3y = 12
-]
+1. $2x + 3y = 12$
+2. $3x - 3y = 3$
 
-[
-5y + 2 = 12
-]
+### Step 2: Add the equations together
 
----
+By adding equation (1) and the new version of equation (2), the $3y$ and $-3y$ will cancel each other out:
 
-## Step 3: Solve for (y)
+$$(2x + 3y) + (3x - 3y) = 12 + 3$$
 
-[
-5y = 12 - 2
-]
+$$5x = 15$$
 
-[
-5y = 10
-]
+### Step 3: Solve for $x$
 
-[
-y = 2
-]
+Divide both sides by 5:
 
----
 
-## Step 4: Solve for (x)
+$$x = \frac{15}{5}$$
 
-Substitute (y = 2) into (x = y + 1):
 
-[
-x = 2 + 1 = 3
-]
+**$x = 3$**
 
----
+### Step 4: Substitute $x$ back into an original equation
 
-## ✅ Step 5: Solution
+Take the simplest original equation, $x - y = 1$, and plug in $3$ for $x$:
 
-[
-x = 3, \quad y = 2
-]
+
+$$3 - y = 1$$
+
+Subtract 3 from both sides:
+
+
+$$-y = 1 - 3$$
+
+$$-y = -2$$
+
+Multiply by -1:
+**$y = 2$**
 
 ---
 
-If you want, I can also show a **graphical method** to visualize this solution on the coordinate plane—it makes it very intuitive!
+### Final Solution:
 
-Do you want me to do that?
+The values that satisfy both equations are:
+**$x = 3, y = 2$**
 
+(You can double-check this by plugging them into the first equation: $2(3) + 3(2) = 6 + 6 = 12$. It works!)
+
+Would you like me to show you how to solve this using the substitution method or perhaps graph these lines for you?

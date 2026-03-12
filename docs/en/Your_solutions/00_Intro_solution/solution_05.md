@@ -1,17 +1,5 @@
 
 
-A vector 
-A
-→
- has a magnitude of 
-15
- and makes an angle of 
-θ
-=
-60
-∘
- with the horizontal axis. Calculate its horizontal and vertical components.
-
 To calculate the components of a vector, we use trigonometric functions to resolve the vector's magnitude into its horizontal ($x$) and vertical ($y$) parts.
 
 ### 1. Identify the Given Values
@@ -71,6 +59,7 @@ The components of the vector $\vec{A}$ are:
 
 * **Horizontal ($A_x$):** 7.5
 * **Vertical ($A_y$):** 12.99 (or $7.5\sqrt{3}$)
+
 
 
 

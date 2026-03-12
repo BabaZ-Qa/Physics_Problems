@@ -58,4 +58,3 @@ The components of the vector $\vec{A}$ are:
 * **Horizontal ($A_x$):** 7.5
 * **Vertical ($A_y$):** 12.99 (or $7.5\sqrt{3}$)
 
-Would you like to see how to calculate the magnitude if you only had these two components?

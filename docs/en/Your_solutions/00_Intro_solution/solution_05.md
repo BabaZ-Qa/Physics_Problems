@@ -1,3 +1,5 @@
+
+
 A vector 
 A
 →
@@ -69,5 +71,6 @@ The components of the vector $\vec{A}$ are:
 
 * **Horizontal ($A_x$):** 7.5
 * **Vertical ($A_y$):** 12.99 (or $7.5\sqrt{3}$)
+
 
 

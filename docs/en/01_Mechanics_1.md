@@ -59,4 +59,3 @@ $$R = 80 \times 12.24 \approx \mathbf{979.2 \text{ m}}$$
 * **Max Height:** $183.67 \text{ m}$
 * **Range:** $979.2 \text{ m}$
 
-Would you like me to show you how these values change if we were to account for a specific launch height above the ground?

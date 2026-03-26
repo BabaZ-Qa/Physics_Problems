@@ -1,146 +1,62 @@
-Let’s solve this classic **projectile motion** problem step by step.
-
----
-
-# 1. Set up the motion
+To solve this projectile motion problem, we will break the initial velocity into its horizontal ($x$) and vertical ($y$) components and apply Newton's Second Law.
 
 Given:
-
-* Initial velocity: ( v_0 = 100 , \text{m/s} )
-* Launch angle: ( \theta = 37^\circ )
-* Gravity: ( g = 9.8 , \text{m/s}^2 )
-* No air resistance
-
-Resolve the velocity into components:
-
-[
-v_{0x} = v_0 \cos\theta = 100 \cos 37^\circ \approx 100(0.8) = 80 , \text{m/s}
-]
-
-[
-v_{0y} = v_0 \sin\theta = 100 \sin 37^\circ \approx 100(0.6) = 60 , \text{m/s}
-]
+* Initial velocity $v_0 = 100 \text{ m/s}$
+* Launch angle $\theta = 37^\circ$
+* Acceleration due to gravity $g \approx 9.8 \text{ m/s}^2$ (we'll use this for calculations)
 
 ---
 
-# 2. Differential equations of motion
+### 1. Differential Equations of Motion
 
-### Horizontal direction (x-axis)
+We start with Newton's Second Law, $F = ma$. Since we are ignoring air resistance, the only force acting on the projectile is gravity, which acts purely in the downward vertical direction.
 
-No acceleration:
+**Horizontal Direction ($x$):**
+There are no horizontal forces ($F_x = 0$).
+$$m \frac{d^2x}{dt^2} = 0 \implies \frac{d^2x}{dt^2} = 0$$
 
-[
-\frac{d^2 x}{dt^2} = 0
-]
+**Vertical Direction ($y$):**
+The only force is weight ($F_y = -mg$).
+$$m \frac{d^2y}{dt^2} = -mg \implies \frac{d^2y}{dt^2} = -g$$
 
-Integrate:
-[
-\frac{dx}{dt} = v_{0x} = 80
-]
-[
-x(t) = 80t
-]
+
 
 ---
 
-### Vertical direction (y-axis)
+### 2. Time of Flight ($T$)
 
-Acceleration due to gravity:
+First, let's find the initial velocity components:
+* $v_{0x} = v_0 \cos(37^\circ) \approx 100 \times 0.8 = 80 \text{ m/s}$
+* $v_{0y} = v_0 \sin(37^\circ) \approx 100 \times 0.6 = 60 \text{ m/s}$
 
-[
-\frac{d^2 y}{dt^2} = -g = -9.8
-]
+The time of flight is the time it takes for the projectile to return to $y = 0$. Using the displacement equation $y(t) = v_{0y}t - \frac{1}{2}gt^2$:
+$$0 = v_{0y}T - \frac{1}{2}gT^2$$
+$$T(v_{0y} - \frac{1}{2}gT) = 0$$
 
-Integrate:
-[
-\frac{dy}{dt} = 60 - 9.8t
-]
-
-[
-y(t) = 60t - 4.9t^2
-]
+Ignoring the $T=0$ solution:
+$$T = \frac{2v_{0y}}{g} = \frac{2 \times 60}{9.8} \approx \mathbf{12.24 \text{ s}}$$
 
 ---
 
-# 3. Time of flight
+### 3. Maximum Height ($H$)
 
-The projectile lands when ( y = 0 ):
-
-[
-0 = 60t - 4.9t^2
-]
-
-Factor:
-[
-t(60 - 4.9t) = 0
-]
-
-[
-t = \frac{60}{4.9} \approx 12.24 , \text{s}
-]
+The maximum height occurs when the vertical velocity is zero ($v_y = 0$). We can use the formula $v_y^2 = v_{0y}^2 - 2gH$:
+$$0 = (60)^2 - 2(9.8)H$$
+$$19.6H = 3600$$
+$$H = \frac{3600}{19.6} \approx \mathbf{183.67 \text{ m}}$$
 
 ---
 
-# 4. Maximum height
+### 4. Horizontal Range ($R$)
 
-At maximum height:
-[
-v_y = 0
-]
-
-[
-60 - 9.8t = 0
-\Rightarrow t = \frac{60}{9.8} \approx 6.12 , \text{s}
-]
-
-Now substitute into ( y(t) ):
-
-[
-y_{\text{max}} = 60(6.12) - 4.9(6.12)^2
-]
-
-[
-y_{\text{max}} \approx 367.2 - 183.6 = 183.6 , \text{m}
-]
+The range is the horizontal distance traveled during the total time of flight. Since horizontal acceleration is zero, the velocity remains constant ($v_x = v_{0x}$):
+$$R = v_{0x} \times T$$
+$$R = 80 \times 12.24 \approx \mathbf{979.2 \text{ m}}$$
 
 ---
+**Summary of Results:**
+* **Time of Flight:** $12.24 \text{ s}$
+* **Max Height:** $183.67 \text{ m}$
+* **Range:** $979.2 \text{ m}$
 
-# 5. Range
-
-Range = horizontal distance at total time:
-
-[
-R = x(t_{\text{flight}}) = 80 \times 12.24
-]
-
-[
-R \approx 979.2 , \text{m}
-]
-
----
-
-# ✅ Final Answers
-
-* **Differential equations:**
-
-  * ( \frac{d^2 x}{dt^2} = 0 )
-  * ( \frac{d^2 y}{dt^2} = -9.8 )
-
-* **Time of flight:**
-  [
-  \boxed{12.24 , \text{s}}
-  ]
-
-* **Maximum height:**
-  [
-  \boxed{183.6 , \text{m}}
-  ]
-
-* **Range:**
-  [
-  \boxed{979.2 , \text{m}}
-  ]
-
----
-
-If you want, I can also derive the **trajectory equation ( y(x) )** or solve it symbolically without approximations.
+Would you like me to show you how these values change if we were to account for a specific launch height above the ground?

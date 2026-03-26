@@ -1,26 +1,4 @@
-```python?code_reference&code_event_index=2
-# Constants for the fly
-m_fly_g = 2
-v_fly = 10
-m_fly_kg = m_fly_g / 1000
-p_fly = m_fly_kg * v_fly
 
-# Constants for the tennis ball
-m_ball_g = 60
-v_ball = 1
-m_ball_kg = m_ball_g / 1000
-p_ball = m_ball_kg * v_ball
-
-print(f"Fly: mass = {m_fly_kg} kg, velocity = {v_fly} m/s, momentum = {p_fly} kg*m/s")
-print(f"Tennis ball: mass = {m_ball_kg} kg, velocity = {v_ball} m/s, momentum = {p_ball} kg*m/s")
-
-
-```
-```text?code_stdout&code_event_index=2
-Fly: mass = 0.002 kg, velocity = 10 m/s, momentum = 0.02 kg*m/s
-Tennis ball: mass = 0.06 kg, velocity = 1 m/s, momentum = 0.06 kg*m/s
-
-```
 To determine which object has greater momentum, we compare their mass and velocity using the fundamental momentum formula.
 
 ### 1. The Momentum Formula

@@ -1,73 +1,62 @@
-# Section 1: Mechanics I
+To solve this projectile motion problem, we will break the initial velocity into its horizontal ($x$) and vertical ($y$) components and apply Newton's Second Law.
 
-## 1. Projectile Motion
+Given:
+* Initial velocity $v_0 = 100 \text{ m/s}$
+* Launch angle $\theta = 37^\circ$
+* Acceleration due to gravity $g \approx 9.8 \text{ m/s}^2$ (we'll use this for calculations)
 
-A projectile is fired from the ground with an initial velocity of $100  \text{ m/s}$ at an angle of $37^\circ$ above the horizontal. Assume no air resistance.
+---
 
-* Derive the differential equations of motion in the horizontal and vertical directions.
+### 1. Differential Equations of Motion
 
-* Determine the time of flight.
+We start with Newton's Second Law, $F = ma$. Since we are ignoring air resistance, the only force acting on the projectile is gravity, which acts purely in the downward vertical direction.
 
-* Determine the maximum height.
+**Horizontal Direction ($x$):**
+There are no horizontal forces ($F_x = 0$).
+$$m \frac{d^2x}{dt^2} = 0 \implies \frac{d^2x}{dt^2} = 0$$
 
-* Determine the range.
-
-## 2. Range Optimization
-
-For projectile motion, show analytically that the maximum range $R(\theta)=\frac{v_0^2 \sin(2\theta)}{g}
-$ for a given initial velocity is achieved at a launch angle of $45^\circ$.
-
-## 3. Path Intersection
-
-Alice is moving along a path described by $A(t) = (2+t, 8-3t)$ and Bob is moving along a path $B(t) = (2t-1, 2t+2)$. Determine if their paths intersect. If yes, determine when and where they will collide. If not, determine the minimum distance between them and when it occurs.
-
-## 4. Vector Calculus
-
-The position of an object is given by $\vec{r}(t) = (3t^2)\hat{i} + (5t - 8t^2)\hat{j}$. Find the object's velocity and acceleration vectors as a function of time.
-
-## 5. Relative Velocity
-
-A river flows east at $2 \text{m/s}$. A boat that can travel at $5 \text{m/s}$ in still water wants to go directly north across the river. In what direction (angle) should it head? How long will it take to cross the river if it's 200 meters wide?
-
-## 6. Variable Velocity
-
-An object's velocity is given by $v(t) = t^2 + 2t - 5$. If the object was at $x=4$ at $t=0$, what is its position and acceleration at time $t=3$?
-
-## 7. Elimination of time and interpretation of acceleration
-
-The path equation is given in parametric form:
-
-$$
-x(t)=2t^2, \qquad y(t)=3t^3
-$$
-
-* Eliminate the parameter $t$.
-* Draw the trajectory.
-* Calculate $\vec v(t)$, $|\vec v(t)|$, $\vec a(t)$ and $|\vec a(t)|$.
-* Is the acceleration constant?
+**Vertical Direction ($y$):**
+The only force is weight ($F_y = -mg$).
+$$m \frac{d^2y}{dt^2} = -mg \implies \frac{d^2y}{dt^2} = -g$$
 
 
-## 8. Circular Motion
 
-Calculate the centripetal acceleration of a person standing on the Earth's equator. The Earth's radius is approximately 6378 km.
+---
 
-## 9. Momentum Comparison
+### 2. Time of Flight ($T$)
 
-Which has greater momentum: a 2-gram fly flying at $10$ m/s or a 60-gram tennis ball moving at $1$ m/s?
+First, let's find the initial velocity components:
+* $v_{0x} = v_0 \cos(37^\circ) \approx 100 \times 0.8 = 80 \text{ m/s}$
+* $v_{0y} = v_0 \sin(37^\circ) \approx 100 \times 0.6 = 60 \text{ m/s}$
 
+The time of flight is the time it takes for the projectile to return to $y = 0$. Using the displacement equation $y(t) = v_{0y}t - \frac{1}{2}gt^2$:
+$$0 = v_{0y}T - \frac{1}{2}gT^2$$
+$$T(v_{0y} - \frac{1}{2}gT) = 0$$
 
-## 10. Kinematics
+Ignoring the $T=0$ solution:
+$$T = \frac{2v_{0y}}{g} = \frac{2 \times 60}{9.8} \approx \mathbf{12.24 \text{ s}}$$
 
-Point M moves according to the equation:
+---
 
-$$
-\vec{r}(t) = (a \cos(\omega t), b \sin(\omega t), bt)
-$$
+### 3. Maximum Height ($H$)
 
-where $a, b, \omega$ are positive constants.
+The maximum height occurs when the vertical velocity is zero ($v_y = 0$). We can use the formula $v_y^2 = v_{0y}^2 - 2gH$:
+$$0 = (60)^2 - 2(9.8)H$$
+$$19.6H = 3600$$
+$$H = \frac{3600}{19.6} \approx \mathbf{183.67 \text{ m}}$$
 
-a) Find the equation of the point's trajectory,
+---
 
-b) Compute the path length of the point from time $t=0$ to $t=t_0$,
+### 4. Horizontal Range ($R$)
 
-c) Draw the trajectory of this point using Python or interactive HTML. Discuss special cases.
+The range is the horizontal distance traveled during the total time of flight. Since horizontal acceleration is zero, the velocity remains constant ($v_x = v_{0x}$):
+$$R = v_{0x} \times T$$
+$$R = 80 \times 12.24 \approx \mathbf{979.2 \text{ m}}$$
+
+---
+**Summary of Results:**
+* **Time of Flight:** $12.24 \text{ s}$
+* **Max Height:** $183.67 \text{ m}$
+* **Range:** $979.2 \text{ m}$
+
+Would you like me to show you how these values change if we were to account for a specific launch height above the ground?

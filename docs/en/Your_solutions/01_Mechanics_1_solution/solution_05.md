@@ -1,190 +1,55 @@
-# 6. Variable Velocity — Step-by-step Solution
+To solve this, we need to use vector addition. The boat's velocity relative to the ground is the sum of its velocity relative to the water and the river's velocity.
 
-## Most useful definitions and formulas
-
-### 1) Position, velocity, acceleration (1D motion)
-
-- **Position**: $x(t)$ — where the object is on a line at time $t$.
-- **Velocity**: $v(t)$ — how fast and in which direction position changes.
-
-$$
-v(t)=\frac{dx}{dt}
-$$
-
-- **Acceleration**: $a(t)$ — how fast velocity changes.
-
-$$
-a(t)=\frac{dv}{dt}=\frac{d^2x}{dt^2}
-$$
-
-### 2) How to get position from velocity
-
-If you know $v(t)$, then $x(t)$ is an antiderivative of $v(t)$:
-
-$$
-x(t)=\int v(t)\,dt + C
-$$
-
-You find the constant $C$ using an **initial condition**, e.g. $x(0)=x_0$.
-
-### 3) How to get acceleration from velocity
-
-Differentiate velocity:
-
-$$
-a(t)=\frac{dv}{dt}
-$$
+**Given:**
+* Velocity of the river ($\vec{v}_r$): $2 \text{ m/s}$ [East]
+* Speed of the boat in still water ($v_{br}$): $5 \text{ m/s}$
+* Width of the river ($d$): $200 \text{ meters}$
+* Desired direction: Due North
 
 ---
 
-## Problem statement
+### 1. Determining the Heading (Angle)
 
-Velocity:
+For the boat to travel directly North, its horizontal (East-West) velocity must exactly cancel out the river's velocity. This means the boat must head at an angle $\theta$ **West of North**.
 
-$$
-v(t)=t^2+2t-5
-$$
 
-Initial condition:
 
-$$
-x(0)=4
-$$
+We can form a right-angled triangle where:
+* The hypotenuse is the boat's speed in still water ($5 \text{ m/s}$).
+* The opposite side (horizontal) must be equal to the river's speed ($2 \text{ m/s}$).
 
-Find:
-- the **position** at $t=3$, i.e. $x(3)$
-- the **acceleration** at $t=3$, i.e. $a(3)$
+Using trigonometry:
+$$\sin(\theta) = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{v_r}{v_{br}}$$
+$$\sin(\theta) = \frac{2}{5} = 0.4$$
+$$\theta = \arcsin(0.4) \approx \mathbf{23.58^\circ}$$
 
----
-
-## Step 1 — Find acceleration from velocity
-
-By definition:
-
-$$
-a(t)=\frac{dv}{dt}
-$$
-
-Differentiate $v(t)$ term-by-term:
-
-$$
-a(t)=\frac{d}{dt}(t^2+2t-5)=2t+2
-$$
-
-Now evaluate at $t=3$:
-
-$$
-a(3)=2\cdot 3 + 2 = 8
-$$
-
-**Result:**
-
-$$
-a(3)=8
-$$
+**Result:** The boat should head at an angle of approximately **$23.58^\circ$ West of North**.
 
 ---
 
-## Step 2 — Find the position function $x(t)$
+### 2. Determining the Resultant Velocity (Northward)
 
-Velocity is the derivative of position:
+Now we find the actual speed at which the boat moves North across the river ($v_y$). We use the Pythagorean theorem or cosine:
 
-$$
-v(t)=\frac{dx}{dt}
-$$
-
-So position is the integral of velocity:
-
-$$
-x(t)=\int (t^2+2t-5)\,dt
-$$
-
-Integrate term-by-term:
-
-- $\int t^2\,dt=\frac{t^3}{3}$
-- $\int 2t\,dt=t^2$
-- $\int (-5)\,dt=-5t$
-
-So:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+C
-$$
+$$v_y = \sqrt{v_{br}^2 - v_r^2}$$
+$$v_y = \sqrt{5^2 - 2^2} = \sqrt{25 - 4} = \sqrt{21}$$
+$$v_y \approx \mathbf{4.58 \text{ m/s}}$$
 
 ---
 
-## Step 3 — Use the initial condition to find $C$
+### 3. Calculating the Time to Cross
 
-We know:
+Since the boat is moving North at $4.58 \text{ m/s}$ and the distance is $200 \text{ meters}$, the time ($t$) is:
 
-$$
-x(0)=4
-$$
-
-Substitute $t=0$ into the formula for $x(t)$:
-
-$$
-x(0)=\frac{0^3}{3}+0^2-5\cdot 0 + C = C
-$$
-
-So:
-
-$$
-C=4
-$$
-
-Therefore the **position function** is:
-
-$$
-x(t)=\frac{t^3}{3}+t^2-5t+4
-$$
+$$t = \frac{\text{Distance}}{\text{Velocity}_y}$$
+$$t = \frac{200}{\sqrt{21}} \approx \frac{200}{4.58}$$
+$$t \approx \mathbf{43.64 \text{ s}}$$
 
 ---
 
-## Step 4 — Evaluate position at $t=3$
+### Summary of Results
+* **Heading Angle:** $23.58^\circ$ West of North.
+* **Resultant Speed North:** $4.58 \text{ m/s}$.
+* **Time to Cross:** $43.64$ seconds.
 
-Substitute $t=3$:
-
-$$
-x(3)=\frac{3^3}{3}+3^2-5\cdot 3+4
-$$
-
-Compute step-by-step:
-
-$$
-x(3)=\frac{27}{3}+9-15+4
-$$
-
-$$
-x(3)=9+9-15+4
-$$
-
-$$
-x(3)=18-15+4
-$$
-
-$$
-x(3)=3+4=7
-$$
-
-**Result:**
-
-$$
-x(3)=7
-$$
-
----
-
-## Final answers
-
-Position at $t=3$:
-
-$$
-x(3)=7
-$$
-
-Acceleration at $t=3$:
-
-$$
-a(3)=8
-$$
+Would you like to see how much further downstream the boat would end up if it simply pointed due North instead?

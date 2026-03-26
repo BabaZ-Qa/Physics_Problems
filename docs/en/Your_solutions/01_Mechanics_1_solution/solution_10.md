@@ -45,36 +45,6 @@ The path length $s$ is the integral of the speed (magnitude of the velocity vect
 
 ---
 
-### c) Python Visualization and Special Cases
-
-You can use the following Python script to visualize this trajectory. It uses `matplotlib` to render the 3D path.
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Constants
-a, b, omega = 5, 3, 0.5
-t0 = 20
-t = np.linspace(0, t0, 1000)
-
-# Equations
-x = a * np.cos(omega * t)
-y = b * np.sin(omega * t)
-z = b * t
-
-# Plotting
-fig = plt.figure(figsize=(10, 7))
-ax = fig.add_cog_subplot(111, projection='3d')
-ax.plot(x, y, z, label='Trajectory of M', color='royalblue', lw=2)
-
-ax.set_xlabel('X axis')
-ax.set_ylabel('Y axis')
-ax.set_zlabel('Z axis')
-ax.set_title(f'Elliptical Helix (a={a}, b={b}, ω={omega})')
-plt.legend()
-plt.show()
-```
 
 #### Discussion of Special Cases:
 

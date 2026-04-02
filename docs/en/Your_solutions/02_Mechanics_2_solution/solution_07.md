@@ -1,36 +1,95 @@
-```
-To solve for the acceleration of the $10\text{ kg}$ block, we need to analyze the forces acting on it while considering the constraints of the system.
+Let’s go step by step and keep the forces very clear.
 
-### 1. Identify the Forces
-There are two blocks:
-* **Block 1 ($m_1 = 5\text{ kg}$):** Stationary (tied to the wall).
-* **Block 2 ($m_2 = 10\text{ kg}$):** Pulled by a force $F = 45\text{ N}$ and moving relative to both the floor and Block 1.
+---
 
+## **1. Understand the setup**
 
+* Top block: ( m_1 = 5 , \text{kg} ) (tied to the wall → **does not move**)
+* Bottom block: ( m_2 = 10 , \text{kg} )
+* Applied force on bottom block: ( F = 45 , \text{N} )
+* Coefficient of kinetic friction: ( \mu_k = 0.2 )
 
-### 2. Calculate the Normal Forces
-The normal forces are required to find the magnitude of the frictional forces.
-* **Normal force between the blocks ($N_1$):** This is equal to the weight of the top block.
-    $$N_1 = m_1 \cdot g = 5\text{ kg} \times 9.8\text{ m/s}^2 = 49\text{ N}$$
-* **Normal force between the bottom block and the floor ($N_2$):** This is the total weight of both blocks pushing down on the floor.
-    $$N_2 = (m_1 + m_2) \cdot g = (5 + 10)\text{ kg} \times 9.8\text{ m/s}^2 = 147\text{ N}$$
+Since the top block is tied to the wall, the bottom block **slides under it**, so kinetic friction acts between them.
 
-### 3. Calculate the Frictional Forces
-Since the $10\text{ kg}$ block is moving, it experiences kinetic friction ($\mu_k = 0.2$) at two surfaces:
-* **Friction from the top block ($f_{k1}$):** Acts against the motion of the $10\text{ kg}$ block.
-    $$f_{k1} = \mu_k \cdot N_1 = 0.2 \times 49\text{ N} = 9.8\text{ N}$$
-* **Friction from the floor ($f_{k2}$):** Acts against the motion of the $10\text{ kg}$ block.
-    $$f_{k2} = \mu_k \cdot N_2 = 0.2 \times 147\text{ N} = 29.4\text{ N}$$
+---
 
-### 4. Apply Newton's Second Law to the 10 kg Block
-The net force ($F_{net}$) on the $10\text{ kg}$ block is the applied force minus the two opposing frictional forces.
-$$F_{net} = F - f_{k1} - f_{k2}$$
-$$F_{net} = 45\text{ N} - 9.8\text{ N} - 29.4\text{ N}$$
-$$F_{net} = 5.8\text{ N}$$
+## **2. Forces acting on the 10 kg block**
 
-Now, use $F = m \cdot a$ to find the acceleration ($a$):
-$$a = \frac{F_{net}}{m_2}$$
-$$a = \frac{5.8\text{ N}}{10\text{ kg}}$$
-$$a = 0.58\text{ m/s}^2$$
+### (A) Applied force
 
-**Result:** The acceleration of the $10\text{ kg}$ block is **$0.58\text{ m/s}^2$**.
+[
+F = 45 , \text{N} \quad (\text{to the right})
+]
+
+---
+
+### (B) Friction with the ground
+
+Normal force from ground:
+[
+N_{\text{ground}} = (m_1 + m_2)g = (5 + 10)\cdot 9.8 = 147 , \text{N}
+]
+
+Friction:
+[
+f_{\text{ground}} = \mu_k N = 0.2 \cdot 147 = 29.4 , \text{N}
+]
+
+Direction: **opposes motion → left**
+
+---
+
+### (C) Friction from the top block
+
+Normal force between blocks:
+[
+N_{\text{top}} = m_1 g = 5 \cdot 9.8 = 49 , \text{N}
+]
+
+Friction:
+[
+f_{\text{top}} = \mu_k N = 0.2 \cdot 49 = 9.8 , \text{N}
+]
+
+Direction:
+
+* Bottom block moves right under top block
+* So friction on bottom block is **left**
+
+---
+
+## **3. Net force on the 10 kg block**
+
+[
+F_{\text{net}} = 45 - 29.4 - 9.8
+]
+
+[
+F_{\text{net}} = 45 - 39.2 = 5.8 , \text{N}
+]
+
+---
+
+## **4. Acceleration**
+
+Using Newton’s second law:
+
+[
+a = \frac{F_{\text{net}}}{m_2} = \frac{5.8}{10}
+]
+
+[
+a = 0.58 , \text{m/s}^2
+]
+
+---
+
+## ✅ **Final Answer**
+
+[
+\boxed{a = 0.58 , \text{m/s}^2 \text{ (to the right)}}
+]
+
+---
+
+If you want, I can also draw a free-body diagram or show how this changes if the top block wasn’t tied.

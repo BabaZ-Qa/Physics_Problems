@@ -1,35 +1,3 @@
-```python?code_reference&code_event_index=2
-m1 = 5
-m2 = 10
-F = 45
-mu = 0.2
-g = 9.8
-
-# Normal force on m1 (top block)
-N1 = m1 * g
-# Kinetic friction between m1 and m2
-fk1 = mu * N1
-
-# Normal force on m2 (bottom block) from the floor
-N2 = (m1 + m2) * g
-# Kinetic friction between m2 and floor
-fk2 = mu * N2
-
-# Net force on m2
-F_net = F - fk1 - fk2
-a2 = F_net / m2
-
-print(f"{N1=}, {fk1=}")
-print(f"{N2=}, {fk2=}")
-print(f"{F_net=}, {a2=}")
-
-
-```
-```text?code_stdout&code_event_index=2
-N1=49.0, fk1=9.8
-N2=147.0, fk2=29.400000000000002
-F_net=5.800000000000001, a2=0.5800000000000001
-
 ```
 To solve for the acceleration of the $10\text{ kg}$ block, we need to analyze the forces acting on it while considering the constraints of the system.
 

@@ -1,72 +1,54 @@
-To find the equivalent resistance of this mixed circuit, we need to simplify the network step by step, working from the innermost or most isolated combinations outward to the main terminals.
-
-Every resistor in the network has a value of $R = 5\ \Omega$. Let's break down the configuration:
+To find the equivalent resistance ($R_{eq}$) of the mixed circuit, we can break it down step by step, starting from the innermost branches and working outward. Every individual resistor has a value of $R = 5\ \Omega$.
 
 ---
 
-### **Step 1: Simplify the Left-Hand Loop**
+### Step 1: The Inner Series Branch
 
-Look closely at the leftmost loop of the circuit. Notice where the connection points (nodes) are located:
-
-* There is a node on the bottom wire.
-* There is another node on the top wire.
-
-Between these two nodes, the current can split into two parallel paths:
-
-1. **Path 1 (Left branch):** Contains exactly **1 resistor**.
-2. **Path 2 (Loop branch):** The current goes through the top resistor, then down through two vertical resistors in series, and then through the bottom resistor.
-
-Let's calculate the total resistance of **Path 2**:
-
-* These 4 resistors are connected back-to-back in a single line, meaning they are in series.
-
-$$R_{\text{path2}} = 5\ \Omega + 5\ \Omega + 5\ \Omega + 5\ \Omega = 20\ \Omega$$
+Looking at the middle vertical branch, there are two resistors connected directly in series with each other.
 
 
+$$R_{series1} = 5\ \Omega + 5\ \Omega = 10\ \Omega$$
 
-Now, **Path 1** ($5\ \Omega$) and **Path 2** ($20\ \Omega$) are connected in parallel between the same two nodes:
+### Step 2: The Parallel Combination with the Bottom Resistor
 
-
-$$R_{\text{left\_loop}} = \frac{R_{\text{path1}} \times R_{\text{path2}}}{R_{\text{path1}} + R_{\text{path2}}}$$
-
-$$R_{\text{left\_loop}} = \frac{5 \times 20}{5 + 20} = \frac{100}{25} = 4\ \Omega$$
-
----
-
-### **Step 2: Combine with the Right Branch**
-
-Now, the entire left section we just simplified to $4\ \Omega$ connects directly to the right branch. Looking at the top junction node:
-
-* The current splits between the entire **Left Loop** and the **Right Branch**.
-* The **Right Branch** consists of **2 vertical resistors in series**.
-
-Let's calculate the resistance of the right branch:
+This $10\ \Omega$ combination is connected in series with the bottom horizontal inner resistor ($5\ \Omega$), forming a loop with the top-left section. Let's combine this entire inner right-and-bottom branch first:
 
 
-$$R_{\text{right}} = 5\ \Omega + 5\ \Omega = 10\ \Omega$$
+$$R_{inner\_branch} = R_{series1} + 5\ \Omega = 10\ \Omega + 5\ \Omega = 15\ \Omega$$
 
-Since the simplified Left Loop ($4\ \Omega$) and the Right Branch ($10\ \Omega$) are in parallel between the upper junction and the lower return wire, we combine them:
+Now, looking at the left side of the circuit, the leftmost vertical resistor ($5\ \Omega$) and the top horizontal resistor ($5\ \Omega$) are in series with each other:
 
 
-$$R_{\text{upper\_parallel}} = \frac{R_{\text{left\_loop}} \times R_{\text{right}}}{R_{\text{left\_loop}} + R_{\text{right}}}$$
+$$R_{left\_top} = 5\ \Omega + 5\ \Omega = 10\ \Omega$$
 
-$$R_{\text{upper\_parallel}} = \frac{4 \times 10}{4 + 10} = \frac{40}{14} \approx 2.857\ \Omega$$
+This left-top combination ($10\ \Omega$) is in parallel with our inner branch ($15\ \Omega$):
+
+
+$$R_{parallel1} = \frac{10 \times 15}{10 + 15} = \frac{150}{25} = 6\ \Omega$$
+
+### Step 3: The Outer Right Branch
+
+Looking at the far-right vertical branch, there are two resistors connected in series:
+
+
+$$R_{series2} = 5\ \Omega + 5\ \Omega = 10\ \Omega$$
+
+### Step 4: Parallel Combination of the Upper Network
+
+The entire upper network we simplified in Step 2 ($R_{parallel1} = 6\ \Omega$) is connected in parallel with this outer right branch ($10\ \Omega$):
+
+
+$$R_{parallel2} = \frac{6 \times 10}{6 + 10} = \frac{60}{16} = 3.75\ \Omega$$
+
+### Step 5: Final Total Equivalent Resistance
+
+Finally, this entire upper combination ($3.75\ \Omega$) is connected in series with the very bottom horizontal resistor ($5\ \Omega$) across the main terminals.
+
+
+$$R_{eq} = 3.75\ \Omega + 5\ \Omega = 8.75\ \Omega$$
 
 ---
 
-### **Step 3: Add the Final Series Resistor**
+### Final Answer
 
-We are now left with one final simplified block ($R_{\text{upper\_parallel}} = \frac{40}{14}\ \Omega$) connected in series with the very last resistor located on the bottom wire before reaching the right-hand terminal.
-
-Since they are in series, we simply add their values together:
-
-
-$$R_{\text{eq}} = R_{\text{upper\_parallel}} + R_{\text{bottom}}$$
-
-$$R_{\text{eq}} = \frac{40}{14} + 5 = \frac{40}{14} + \frac{70}{14} = \frac{110}{14}\ \Omega$$
-
----
-
-### **Final Answer**
-
-$$R_{\text{eq}} \approx 7.86\ \Omega$$
+$$R_{eq} = 8.75\ \Omega$$
